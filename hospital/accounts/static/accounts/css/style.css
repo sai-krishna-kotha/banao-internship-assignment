@@ -1,0 +1,170 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    color: #1c1c1e;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-field {
+    margin-bottom: 20px; 
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="password"],
+.form-field input[type="file"],
+.form-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-errors,
+.form-field .errorlist {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-errors p {
+    margin: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-header .logout-link {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-header .logout-link:hover {
+    background-color: #c82333;
+    text-decoration: none;
+}
+
+.profile-picture {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 25px;
+    border: 4px solid #f0f2f5;
+}
+
+.details-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-list li {
+    padding: 12px 5px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+}
+
+.details-list li:last-child {
+    border-bottom: none;
+}
+
+.details-list strong {
+    color: #555;
+    display: inline-block;
+    width: 100px;
+}

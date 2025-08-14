@@ -1,0 +1,33 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="form-errors">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+
+            <div class="form-field">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+
+            <div class="form-field">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                {{ form.password.errors }}
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+        <p class="form-link">Don't have an account? <a href="{% url 'accounts:signup' %}">Sign up</a></p>
+    </div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="form-errors">
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="form-field">
+                {{ form.first_name.label_tag }} 
+                {{ form.first_name }} 
+                {{ form.first_name.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.last_name.label_tag }} 
+                {{ form.last_name }} 
+                {{ form.last_name.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.profile_picture.label_tag }} 
+                {{ form.profile_picture }} 
+                {{ form.profile_picture.errors }}
+            </div>
+
+            <div class="form-field">
+                {{ form.username.label_tag }} 
+                {{ form.username }} 
+                {{ form.username.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.email.label_tag }} 
+                {{ form.email }} 
+                {{ form.email.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.password.label_tag }} 
+                {{ form.password }} 
+                {{ form.password.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.confirm_password.label_tag }} 
+                {{ form.confirm_password }} 
+                {{ form.confirm_password.errors }}
+            </div>
+            
+            <div class="form-field">
+                {{ form.user_type.label_tag }} 
+                {{ form.user_type }} 
+                {{ form.user_type.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.address_line1.label_tag }} 
+                {{ form.address_line1 }} 
+                {{ form.address_line1.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.city.label_tag }} 
+                {{ form.city }} 
+                {{ form.city.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.state.label_tag }} 
+                {{ form.state }} 
+                {{ form.state.errors }}
+            </div>
+            <div class="form-field">
+                {{ form.pincode.label_tag }} 
+                {{ form.pincode }} 
+                {{ form.pincode.errors }}
+            </div>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class="form-link">Already have an account? <a href="{% url 'accounts:login' %}">Login</a></p>
+    </div>
+{% endblock %}
